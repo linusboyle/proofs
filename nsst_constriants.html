@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:x="http://www.texmacs.org/2002/extensions" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <head>
+    <title>No title</title>
+    <meta content="TeXmacs 1.99.10" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } .subsup {
+      display: inline; vertical-align: -0.2em } .subsup td { padding: 0px;
+      text-align: left} .fraction { display: inline; vertical-align: -0.8em }
+      .fraction td { padding: 0px; text-align: center } .wide { position:
+      relative; margin-left: -0.4em } .accent { position: relative;
+      margin-left: -0.4em; top: -0.1em } .title-block { width: 100%;
+      text-align: center } .title-block p { margin: 0px } .compact-block p {
+      margin-top: 0px; margin-bottom: 0px } .left-tab { text-align: left }
+      .center-tab { text-align: center } .balloon-anchor { border-bottom: 1px
+      dotted #000000; outline: none; cursor: help; position: relative; }
+      .balloon-anchor [hidden] { margin-left: -999em; position: absolute;
+      display: none; } .balloon-anchor: hover [hidden] { position: absolute;
+      left: 1em; top: 2em; z-index: 99; margin-left: 0; width: 500px; display:
+      inline-block; } .balloon-body { } .ornament { border-width: 1px;
+      border-style: solid; border-color: black; display: inline-block;
+      padding: 0.2em; } .right-tab { float: right; position: relative; top:
+      -1em } 
+    </style>
+  </head>
+  <body>
+    <table class="title-block">
+      <tr>
+        <td><table class="title-block">
+          <tr>
+            <td><font style="font-size: 168.2%"><b>NSST constraints</b></font></td>
+          </tr>
+        </table><p style="margin-top: 1em; margin-bottom: 1em">
+          <div class="compact-block">
+            <table class="title-block">
+              <tr>
+                <td><p style="margin-top: 0.5em; margin-bottom: 0.5em">
+                  <span style="margin-left: 0pt"></span>
+                  <table style="display: inline-table; vertical-align: middle">
+                    <tbody><tr>
+                      <td style="text-align: center; padding-left: 0em; padding-right: 0em; padding-bottom: 0em; padding-top: 0em; width: 100%"><center>
+                        <p>
+                          <class style="font-variant: small-caps">by Zhilei Han</class>
+                        </p>
+                      </center></td>
+                    </tr></tbody>
+                  </table>
+                </p></td>
+              </tr>
+            </table>
+          </div>
+        </p><table class="title-block">
+          <tr>
+            <td><i>June 24, 2020</i></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table>
+    <p>
+      <p>
+        <b>Definition <class style="font-style: normal">1</class>. </b><i><class style="font-style: normal"><b>(Streaming
+        String Transducer) </b></class></i>
+      </p>
+      <p>
+        <i><p>
+          An NSST[<a href="#bib-filiotCopyfulStreamingString2017">6</a>] is a tuple <var>T</var> =
+          (<var>Q</var>,<var>&Sigma;</var>,<var>&Gamma;</var>,<var>X</var>,<var>E</var>,<var>q</var><sub>0</sub>,<var>F</var>),
+          where <var>&Sigma;</var> and <var>&Gamma;</var> are input and output
+          alphabet respectively, <var>X</var> is a finite set of variables,
+          and <var>Q</var> a finite set of states.
+          <var>E</var><var>&sube;</var><var>Q</var><var>&times;</var><var>&Sigma;</var><var>&times;</var><var>Q</var><var>&times;</var><var>S</var>
+          is the transition function where S is the set of substitution
+          s:<var>X</var><var>&rarr;</var>(<var>X</var><var>&cup;</var><var>&Gamma;</var>)<sup><var>&lowast;</var></sup>,
+          and F is a partial function from Q to
+          (<var>X</var><var>&cup;</var><var>&Gamma;</var>)<sup><var>&lowast;</var></sup>.
+        </p><p>
+          Like FA, a successful run of T on <var>w</var> =
+          <var>&sigma;</var><sub>1</sub><var>&hellip;</var><var>&sigma;</var><sub><var>n</var></sub>
+          is the sequence of states
+          <var>q</var><sub>0</sub><var>q</var><sub>1</sub><var>&hellip;</var><var>q</var><sub><var>n</var></sub>
+          where
+          (<var>q</var><sub><var>i</var></sub>,<var>&sigma;</var><sub><var>i</var>
+          + 1</sub>,<var>q</var><sub><var>i</var> +
+          1</sub>,<var>s</var><sub><var>i</var> +
+          1</sub>)<var>&isin;</var><var>E</var> and
+          <var>F</var>(<var>q</var><sub><var>n</var></sub>) is defined. The
+          output of a run of T is defined as Out(<var>r</var>) =
+          <var>s</var><sub><var>&epsilon;</var></sub><var>&#x2218;</var><var>s</var><sub>1</sub><var>&#x2218;</var><var>s</var><sub>2</sub><var>&hellip;</var><var>s</var><sub><var>n</var></sub><var>&#x2218;</var><var>F</var>(<var>q</var><sub><var>n</var></sub>)
+          where <var>s</var><sub><var>&epsilon;</var></sub> is the empty
+          substitution which maps all variables to <var>&epsilon;</var>.
+        </p></i>
+      </p>
+      <p>
+        <i>For word w, the output of w by T is the set
+        <var>T</var>(<var>w</var>) = {Out(<var>r</var>)|<var>r</var> is
+        <var>a</var> successful run of <var>T</var> on <var>w</var>}.</i>
+      </p>
+    </p>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <b>Theorem <class style="font-style: normal">1</class>. </b><i><class style="font-style: normal"><b>(PreImage)
+      </b></class>Given NSST <var>T</var> =
+      (<var>Q</var><sub><var>T</var></sub>,<var>&Sigma;</var>,<var>&Sigma;</var>',<var>&Gamma;</var>,<var>E</var>,<var>q</var><sub>0,<var>T</var></sub>,<var>F</var><sub><var>T</var></sub>)
+      and NFA <var>M</var> =
+      (<var>Q</var><sub><var>M</var></sub>,<var>&Sigma;</var>',<var>&delta;</var><sub><var>M</var></sub>,<var>q</var><sub>0,<var>M</var></sub>,<var>F</var><sub><var>M</var></sub>),
+      there is an NFA <var>N</var> =
+      (<var>Q</var><sub><var>N</var></sub>,<var>&Sigma;</var>,<var>&delta;</var><sub><var>N</var></sub>,<var>q</var><sub>0,<var>N</var></sub>,<var>F</var><sub><var>N</var></sub>),
+      such that for all word w on <var>&Sigma;</var>,
+      <var>w</var><var>&isin;</var><var>L</var>(<var>N</var>) if and only if
+      there is a word <var>w</var>'<var>&isin;</var><var>T</var>(<var>w</var>)
+      such that <var>w</var>'<var>&isin;</var><var>L</var>(<var>M</var>). N is
+      computable from T and M.</i>
+    </p>
+    <p>
+      We omit the correctness proof for now, but give a construction of N:
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Let <var>Q</var><sub><var>N</var></sub> =
+      <var>Q</var><sub><var>T</var></sub><var>&times;</var><var>P</var>(<var>Q</var><sub><var>M</var></sub>)<sup><var>Q</var><sub><var>M</var></sub><var>&times;</var><var>&Gamma;</var></sup>,
+      thus the state of N is denoted by a pair (<var>q</var>,<var>&rho;</var>)
+      where q is a state of T and
+      <var>&rho;</var><var>&isin;</var><var>Q</var><sub><var>M</var></sub><var>&times;</var><var>&Gamma;</var><var>&rarr;</var><var>P</var>(<var>Q</var><sub><var>M</var></sub>)
+      is the simulation function. The initial state of N is
+      (<var>q</var><sub>0,<var>T</var></sub>,<var>&rho;</var><sub><var>&epsilon;</var></sub>)
+      where
+      <var>&rho;</var><sub><var>&epsilon;</var></sub>(<var>q</var>,<var>x</var>)
+      = {<var>q</var>} for all state q and variable x.
+    </p>
+    <p>
+      For a state
+      <var>q</var><var>&isin;</var><var>Q</var><sub><var>M</var></sub>, a
+      simulation function <var>&rho;</var>, and a string
+      <var>w</var><var>&isin;</var>(<var>&Gamma;</var><var>&cup;</var><var>&Sigma;</var>')<sup><var>&lowast;</var></sup>,
+      we recursively define the <i>evaluation</i> of w on q and
+      <var>&rho;</var>, denoted by
+      <var>U</var>(<var>q</var>,<var>&rho;</var>,<var>w</var>) as
+    </p>
+    <center>
+      <var>U</var>
+      (
+      <var>q</var>
+      ,
+      <var>&rho;</var>
+      ,
+      <var>w</var>
+      ) = {
+      <table style="display: inline-table; vertical-align: middle">
+        <tbody><tr>
+          <td style="text-align: center; text-align: left"><var>&delta;</var><sub><table class="subsup">
+            <tr>
+              <td><var>&lowast;</var></td>
+            </tr>
+            <tr>
+              <td><var>M</var></td>
+            </tr>
+          </table></sub>(<var>U</var>(<var>q</var>,<var>&rho;</var>,<var>w</var>'),<var>a</var>)</td>
+          <td style="text-align: center; text-align: left"><var>w</var> =
+          <var>w</var>'<var>a</var><var>&and;</var><var>a</var><var>&isin;</var><var>&Sigma;</var>'</td>
+        </tr><tr>
+          <td style="text-align: center; text-align: left">cup<sub><var>q</var>'<var>&isin;</var><var>U</var>(<var>q</var>,<var>&rho;</var>,<var>w</var>')</sub><var>&rho;</var>(<var>q</var>',<var>a</var>)</td>
+          <td style="text-align: center; text-align: left"><var>w</var> =
+          <var>w</var>'<var>a</var><var>&and;</var><var>a</var><var>&isin;</var><var>&Gamma;</var></td>
+        </tr><tr>
+          <td style="text-align: center; text-align: left">{<var>q</var>}</td>
+          <td style="text-align: center; text-align: left"><var>w</var> = <var>&epsilon;</var></td>
+        </tr></tbody>
+      </table>
+      <var>&#x200B;</var>
+    </center>
+    <p>
+      For all substitution
+      <var>s</var><var>&isin;</var><var>&Gamma;</var><var>&rarr;</var>(<var>&Gamma;</var><var>&cup;</var><var>&Sigma;</var>')<sup><var>&lowast;</var></sup>,
+      the simulation function <var>&rho;</var> <i>updated</i> by s, denoted by
+      <var>R</var>(<var>&rho;</var>,<var>s</var>), is another simulation
+      function defined as follows:
+    </p>
+    <center>
+      <var>R</var>(<var>&rho;</var>,<var>s</var>)(<var>q</var>,<var>x</var>) =
+      <var>U</var>(<var>q</var>,<var>&rho;</var>,<var>s</var>(<var>x</var>))
+    </center>
+    <p>
+      Now, consider the transition function of N. For all state
+      (<var>q</var>,<var>&rho;</var>)<var>&isin;</var><var>Q</var><sub><var>N</var></sub>,
+      if
+      (<var>q</var>,<var>a</var>,<var>q</var>',<var>s</var>)<var>&isin;</var><var>E</var>
+      for some character a and substitution s, then:
+    </p>
+    <center>
+      ((<var>q</var>,<var>&rho;</var>),<var>a</var>,(<var>q</var>',<var>R</var>(<var>&rho;</var>,<var>s</var>)))<var>&isin;</var><var>&delta;</var><sub><var>N</var></sub>
+    </center>
+    <p>
+      At last, the terminal state set <var>F</var><sub><var>N</var></sub>
+      contains all the states (<var>q</var>,<var>&rho;</var>) which satisfy
+      the following properties:
+    </p>
+    <ol>
+      <li>
+        <p>
+          <var>F</var><sub><var>T</var></sub>(<var>q</var>) is defined
+        </p>
+      </li>
+      <li>
+        <p>
+          <var>U</var>(<var>q</var><sub>0,<var>M</var></sub>,<var>&rho;</var>,<var>F</var><sub><var>T</var></sub>(<var>q</var>))<var>&cap;</var><var>F</var><sub><var>M</var></sub><var>&ne;</var><var>&empty;</var>
+        </p>
+      </li>
+    </ol>
+    <p>
+      
+    </p>
+    <p>
+      <p>
+        <b>Note <class style="font-style: normal">1</class>. </b><class style="font-style: normal"><b>(Intuition)
+        </b></class>
+      </p>
+      <p>
+        The construction above is actually very simple. The automaton N
+        simulates the run of NSST T, together with the <i>summary</i> of M
+        when a variable of T in inputed. The construction should be
+        exponential.
+      </p>
+      <p>
+        The construction does not use the so-called <i>copyless</i>
+        property[<a href="#bib-alurExpressivenessStreamingString2010">1</a>, <a href="#bib-alurNondeterministicStreamingString2011">2</a>], thus the expressive power of
+        NSST in this context is greater than 2FT.
+      </p>
+    </p>
+    <p>
+      
+    </p>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <b>Definition <class style="font-style: normal">2</class>. </b><i><class style="font-style: normal"><b>(Two way
+      NSST?) </b></class>The definition of 2NSST is just like 2FT, allowing
+      bidirectional move of NSST's head.</i>
+    </p>
+    <p>
+      <p>
+        <b>Note <class style="font-style: normal">2</class>. </b>
+      </p>
+      <p>
+        One thing is worth noting about this idea of 2NSST: <i>the pre-image
+        of 2NSST is still computable</i>. We just use a 2FA N to simulate the
+        2NSST, in the same manner of the construction above. We can then
+        transform the 2FA into a one-way FA in exponential time.
+      </p>
+      <p>
+        However, the expressive power of 2NSST is unknown (yet). I highly
+        suspect that 2NSST is equivalent to NSST, since the bidirectional move
+        of head provides the same function as variables, to some extent.
+        Anyway, the expressive power of NSST should be sufficient now.
+      </p>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      All the function expressible by 2FT is also expressible by NSST, like
+      <i>split</i>. Below is an example of what more NSST can express.
+    </p>
+    <p>
+      <p>
+        <b>Definition <class style="font-style: normal">3</class>. </b><i><class style="font-style: normal"><b>(Regular
+        Expression with capturing group, regex) </b></class></i>
+      </p>
+      <p>
+        <i><p>
+          Suppose <var>&Gamma;</var> is some set of variables, x is an element
+          of <var>&Gamma;</var>. a is a character in <var>&Sigma;</var>
+        </p><center>
+          <var>&alpha;</var>&amp;colons; =
+          <var>&epsilon;</var>|<var>a</var>|<var>&alpha;</var> +
+          <var>&alpha;</var>|<var>&alpha;</var><var>&#x2218;</var><var>&alpha;</var>|<var>&alpha;</var><sup><var>&lowast;</var></sup>|(<var>&alpha;</var>)%<var>x</var>
+        </center><p>
+          WLOG, we assume a variable occurs at most once in a regex.
+        </p></i>
+      </p>
+      <p>
+        <i>the semantics of regex is defined as tuple
+        (<var>w</var>,<var>w</var><sub><var>x</var></sub>,<var>w</var><sub><var>y</var></sub>,<var>&hellip;</var>)
+        where w is the whole string matched, and
+        <var>w</var><sub><var>x</var></sub> is the string matched by the
+        capturing group marked by x, etc. A more formal definition involves
+        match trees and recursive definition. See[<a href="#bib-campeanuFORMALSTUDYPRACTICAL2003">3</a>, <a href="#bib-carleExtendedRegularExpressions2009">4</a>]</i>
+      </p>
+    </p>
+    <p>
+      <p>
+        <b>Definition <class style="font-style: normal">4</class>. </b><i><class style="font-style: normal"><b>(ReplaceAll
+        with capturing group and back reference) </b></class></i>
+      </p>
+      <p>
+        <i><p>
+          Consider the constriant <var>y</var> =
+          replaceAll(<var>x</var>,<var>e</var>,<var>r</var>), where e is a
+          regex and
+          <var>r</var><var>&isin;</var>(<var>&Sigma;</var><var>&cup;</var><var>&Gamma;</var>)<sup><var>&lowast;</var></sup>.
+          
+        </p><p>
+          The semantics of replaceAll in this form is like the original one[<a
+          href="#bib-chenWhatDecidableString2018">5</a>], with leftmost and longest match of e in x replaced,
+          except that when replacing, every variable in r is substituted by
+          the string captured by the corresponding capturing group in e. 
+        </p></i>
+      </p>
+      <p>
+        <i>A more formal definition should be proposed in the future.</i>
+      </p>
+    </p>
+    <p>
+      <p>
+        <b>Note <class style="font-style: normal">3</class>. </b>
+      </p>
+      <p>
+        The capturing process might not be unique, though. For example,
+        (<var>a</var><sup> + </sup>)%<var>x</var>(<var>a</var><sup> +
+        </sup>)%<var>y</var> matches any string
+        <var>a</var><sup><var>n</var></sup> with n greater than 1, but the
+        match over string 'aaa' has two possibilities ('aa' for x, or 'a' for
+        x).
+      </p>
+      <p>
+        Thus, this form of replaceAll becomes nondeterministic.
+      </p>
+    </p>
+    <p>
+      
+    </p>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <b>Remark <class style="font-style: normal">1</class>. </b>Given e and r, we could use NSST
+      to model this function.
+    </p>
+    <p>
+      Again, we give a construction of NSST, but omit the proof:
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Suppose
+      A=(<var>Q</var>,<var>F</var>,<var>&delta;</var>,<var>&Sigma;</var>,<var>q</var><sub>0</sub>)
+      is the NFA constructed by Glushkov method on e. Here, <var>Q</var> =
+      {<var>q</var><sub>0</sub>,<var>q</var><sub>1</sub>,<var>&hellip;</var>,<var>q</var><sub><var>n</var></sub>}.
+      Each state other than <var>q</var><sub>0</sub> corresponds to an
+      occurrence of character in e.
+    </p>
+    <p>
+      For every subexpression v of e, by the definition of Glushkov
+      construction, there must be a subgraph of A which corresponds to v. Use
+      A(v) to denote the subgraph. For a state q of A, define
+      <var>&Gamma;</var>(<var>q</var>) =
+      {<var>x</var><var>&isin;</var><var>&Gamma;</var>|<var>v</var> is
+      <var>a</var> capturing group of <var>x</var> in 
+      <var>e</var><var>&and;</var><var>q</var><var>&isin;</var><var>A</var>(<var>v</var>)},
+      in other words, <var>&Gamma;</var>(<var>q</var>) is the set of variables
+      which should be updated when entering q.
+    </p>
+    <p>
+      Furthermore, for a subexpression v, we use Start(v) and End(v) to denote
+      the starting and ending states of A(v) (see the definition of Glushkov
+      construction).
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Let NSST <var>T</var> =
+      (<var>Q</var>',<var>&Sigma;</var>,<var>&Sigma;</var>,{acc}<var>&cup;</var><var>&Gamma;</var>,<var>E</var>,<var>q</var><sub>0</sub>',<var>F</var>'),
+      we construct T using a similar method as parsing automata[<a href="#bib-chenWhatDecidableString2018">5</a>].
+      The initial state is
+      ({<var>q</var><sub>0</sub>},left,<var>&empty;</var>).
+    </p>
+    <ul>
+      <li>
+        <p>
+          The transition within <i>left</i> mode is just the same as the
+          original parsing automata. The substitution is s(acc)=acc.a and
+          s(x)=x for every x other than acc, where a is the input character in
+          this step.
+        </p>
+      </li>
+      <li>
+        <p>
+          Suppose
+          (<var>&rho;</var>{<var>q</var><sub>0</sub>},left,<var>S</var>)<var>&isin;</var><var>Q</var>',
+          and <var>a</var><var>&isin;</var><var>&Sigma;</var>. If
+          <var>&delta;</var>(<var>S</var>,<var>a</var>)<var>&cap;</var><var>F</var>
+          = <var>&empty;</var>,
+          <var>&delta;</var><sup><var>&lowast;</var></sup>(<var>&rho;</var>,<var>a</var>)<var>&cap;</var><var>F</var>
+          = <var>&empty;</var> and
+          <var>&delta;</var>(<var>q</var><sub>0</sub>,<var>a</var>)<var>&#x2288;</var><var>&delta;</var>(<var>S</var>,<var>a</var>)<var>&cup;</var><var>&delta;</var><sup><var>&lowast;</var></sup>(<var>&rho;</var>,<var>a</var>),
+          then for every
+          <var>q</var>'<var>&isin;</var><var>&delta;</var>(<var>q</var><sub>0</sub>,<var>a</var>),
+          we have
+        </p>
+        <center>
+          ((<var>&rho;</var>{<var>q</var><sub>0</sub>},left,<var>S</var>),<var>a</var>,({<var>q</var>'},long,<var>&delta;</var>(<var>S</var>,<var>a</var>)<var>&cup;</var><var>&delta;</var><sup><var>&lowast;</var></sup>(<var>&rho;</var>,<var>a</var>)),<var>s</var>)<var>&isin;</var><var>E</var>
+        </center>
+        <p>
+          where s is the substitution defined as: s(x) = x.a for every x in
+          <var>&Gamma;</var>(<var>q</var>'), and s(y)=y for every other
+          variable y.
+        </p>
+      </li>
+      <li>
+        <p>
+          Suppose
+          ({<var>q</var>},long,<var>S</var>)<var>&isin;</var><var>Q</var>',
+          and <var>a</var><var>&isin;</var><var>&Sigma;</var>. If
+          <var>&delta;</var>(<var>S</var>,<var>a</var>)<var>&cap;</var><var>F</var>
+          = <var>&empty;</var>, and 
+          <var>&delta;</var>(<var>q</var>,<var>a</var>)<var>&#x2288;</var><var>&delta;</var>(<var>S</var>,<var>a</var>),
+          then for every
+          <var>q</var>'<var>&isin;</var><var>&delta;</var>(<var>q</var><sub>0</sub>,<var>a</var>),
+          we have
+        </p>
+        <center>
+          (({<var>q</var>},long,<var>S</var>),<var>a</var>,({<var>q</var>'},long,<var>&delta;</var>(<var>S</var>,<var>a</var>)),<var>s</var>)<var>&isin;</var><var>E</var>
+        </center>
+        <p>
+          where s is defined as follows:
+        </p>
+        <p>
+          Suppose <var>V</var> = {<var>v</var>|<var>v</var> is <var>a</var>
+          Kleene star in
+          <var>e</var><var>&and;</var><var>q</var><var>&isin;</var>End(<var>v</var>)<var>&and;</var><var>q</var>'<var>&isin;</var>Start(<var>v</var>)}.
+          Let P be the set of all variables captured in V. For all variable x
+          in the set <var>&Gamma;</var>(<var>q</var>')\<var>P</var>,
+          s(x)=acc.a. For all variable y in the set
+          <var>P</var>\<var>&Gamma;</var>(<var>q</var>'),
+          <var>s</var>(<var>x</var>) = <var>&epsilon;</var>. For all variable
+          z in the set
+          <var>P</var><var>&cap;</var><var>&Gamma;</var>(<var>q</var>'),
+          s(z)=a. All the other variables do not change.
+        </p>
+      </li>
+      <li>
+        <p>
+          Suppose
+          ({<var>q</var>},long,<var>S</var>)<var>&isin;</var><var>Q</var>',
+          and <var>a</var><var>&isin;</var><var>&Sigma;</var>. If
+          <var>&delta;</var>(<var>S</var>,<var>a</var>)<var>&cap;</var><var>F</var>
+          = <var>&empty;</var> and
+          <var>&delta;</var>(<var>q</var>,<var>a</var>)<var>&cap;</var><var>F</var><var>&ne;</var><var>&empty;</var>,
+          then for every state
+          <var>q</var>'<var>&isin;</var><var>&delta;</var>(<var>q</var>,<var>a</var>)<var>&cap;</var><var>F</var>,
+          we have
+        </p>
+        <center>
+          (({<var>q</var>},long,<var>S</var>),<var>a</var>,({<var>q</var><sub>0</sub>},left,<var>&delta;</var>(<var>S</var>,<var>a</var>)<var>&cup;</var><var>q</var>'),<var>s</var>)<var>&isin;</var><var>E</var>
+        </center>
+        <p>
+          where s is defined as: <var>s</var>(acc) =
+          acc.<var>a</var><sub>1</sub>.<var>a</var><sub>2</sub><var>&hellip;</var><var>a</var><sub><var>n</var></sub>,
+          where <var>r</var> =
+          <var>a</var><sub>1</sub><var>&hellip;</var><var>a</var><sub><var>n</var></sub>.
+          <var>s</var>(<var>x</var>) = <var>&epsilon;</var> for every other
+          variable x.
+        </p>
+      </li>
+    </ul>
+    <p>
+      The output function <var>F</var>' is simple: <var>F</var>'(<var>q</var>)
+      = acc<span style="margin-left: 1em"></span>iff<span style="margin-left: 1em"></span><var>q</var> = ( -
+      ,left, - ) .
+    </p>
+    <p>
+      
+    </p>
+    <h2 id="auto-1">Bibliography<span style="margin-left: 1em"></span></h2>
+    <div style="text-indent: 0em">
+      <div class="compact-block">
+        <font style="font-size: 84.0%"><dl>
+          <p>
+            <p>
+              <strong>[1]  </strong><a id="bib-alurExpressivenessStreamingString2010"></a>Rajeev Alur and Pavol
+              &#x010C;ern&yacute;. Expressiveness of streaming string
+              transducers. Page 12.
+            </p>
+            <p>
+              <strong>[2]  </strong><a id="bib-alurNondeterministicStreamingString2011"></a>Rajeev Alur and Jyotirmoy V.
+              Deshmukh. Nondeterministic Streaming String Transducers. In Luca
+              Aceto, Monika Henzinger, and Ji&#x0159;&iacute; Sgall, editors,
+              <i>Automata, Languages and Programming</i>, volume 6756 of
+              <i>Lecture Notes in Computer Science</i>, pages 1&ndash;20.
+              Springer Berlin Heidelberg.
+            </p>
+            <p>
+              <strong>[3]  </strong><a id="bib-campeanuFORMALSTUDYPRACTICAL2003"></a>Cezar C&acirc;mpeanu, Kai
+              Salomaa, and Sheng Yu. A FORMAL STUDY OF PRACTICAL REGULAR
+              EXPRESSIONS. 14(06):1007&ndash;1018.
+            </p>
+            <p>
+              <strong>[4]  </strong><a id="bib-carleExtendedRegularExpressions2009"></a>Benjamin Carle and Paliath
+              Narendran. On Extended Regular Expressions. In Adrian Horia
+              Dediu, Armand Mihai Ionescu, and Carlos Mart&iacute;n-Vide,
+              editors, <i>Language and Automata Theory and Applications</i>,
+              volume 5457 of <i>Lecture Notes in Computer Science</i>, pages
+              279&ndash;289. Springer Berlin Heidelberg.
+            </p>
+            <p>
+              <strong>[5]  </strong><a id="bib-chenWhatDecidableString2018"></a>Taolue Chen, Yan Chen, Matthew
+              Hague, Anthony W. Lin, and Zhilin Wu. What is decidable about
+              string constraints with the ReplaceAll function. 2:3&ndash;1.
+            </p>
+            <p>
+              <strong>[6]  </strong><a id="bib-filiotCopyfulStreamingString2017"></a>Emmanuel Filiot and
+              Pierre-Alain Reynier. Copyful Streaming String Transducers. In
+              Matthew Hague and Igor Potapov, editors, <i>Reachability
+              Problems</i>, volume 10506 of <i>Lecture Notes in Computer
+              Science</i>, pages 75&ndash;86. Springer International
+              Publishing.
+            </p>
+          </p>
+        </dl></font>
+      </div>
+    </div>
+  </body>
+</html>
