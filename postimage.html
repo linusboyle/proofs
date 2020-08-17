@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:x="http://www.texmacs.org/2002/extensions" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <head>
+    <title>PostImage</title>
+    <meta content="TeXmacs 1.99.13" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.5em; } .subsup { display:
+      inline; vertical-align: -0.2em } .subsup td { padding: 0px; text-align:
+      left} .fraction { display: inline; vertical-align: -0.8em } .fraction td
+      { padding: 0px; text-align: center } .wide { position: relative;
+      margin-left: -0.4em } .accent { position: relative; margin-left: -0.4em;
+      top: -0.1em } .title-block { width: 100%; text-align: center }
+      .title-block p { margin: 0px } .compact-block p { margin-top: 0px;
+      margin-bottom: 0px } .left-tab { text-align: left } .center-tab {
+      text-align: center } .balloon-anchor { border-bottom: 1px dotted
+      #000000; outline: none; cursor: help; position: relative; }
+      .balloon-anchor [hidden] { margin-left: -999em; position: absolute;
+      display: none; } .balloon-anchor: hover [hidden] { position: absolute;
+      left: 1em; top: 2em; z-index: 99; margin-left: 0; width: 500px; display:
+      inline-block; } .balloon-body { } .ornament { border-width: 1px;
+      border-style: solid; border-color: black; display: inline-block;
+      padding: 0.2em; } .right-tab { float: right; position: relative; top:
+      -1em } 
+    </style>
+  </head>
+  <body>
+    <table class="title-block">
+      <tr>
+        <td><table class="title-block">
+          <tr>
+            <td><font style="font-size: 168.2%"><b>PostImage</b></font></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table>
+    <p>
+      For any transducer <var>T</var> =
+      (<var>Q</var><sub><var>T</var></sub>,<var>&Sigma;</var>,<var>&delta;</var><sub><var>T</var></sub>,<var>q</var><sub>0,<var>T</var></sub>,<var>F</var><sub><var>T</var></sub>)
+      and FA <var>A</var> =
+      (<var>Q</var><sub><var>A</var></sub>,<var>&Sigma;</var>,<var>&delta;</var><sub><var>A</var></sub>,<var>q</var><sub>0,<var>A</var></sub>,<var>F</var><sub><var>A</var></sub>),
+      we can construct a FA <var>B</var> =
+      (<var>Q</var><sub><var>B</var></sub>,<var>&Sigma;</var>,<var>&delta;</var><sub><var>B</var></sub>,<var>q</var><sub>0,<var>B</var></sub>,<var>F</var><sub><var>B</var></sub>)
+      which satisfies <var>L</var>(<var>B</var>) =
+      Post<sub><var>T</var></sub>(<var>A</var>) as follows:
+    </p>
+    <p>
+      <var>Q</var><sub><var>B</var></sub> =
+      (<var>Q</var><sub><var>T</var></sub><var>&times;</var><var>Q</var><sub><var>A</var></sub>)<var>&cup;</var><var>S</var>,
+      where S contains all the fresh intermediate states which are introduced
+      below.
+    </p>
+    <p>
+      The initial state <var>q</var><sub>0,<var>B</var></sub> is
+      (<var>q</var><sub>0,<var>T</var></sub>,<var>q</var><sub>0,<var>A</var></sub>),
+      and <var>F</var><sub><var>B</var></sub> contains states of the form
+      (<var>q</var><sub><var>T</var></sub>,<var>q</var><sub><var>A</var></sub>)
+      which satisfies
+      <var>q</var><sub><var>T</var></sub><var>&isin;</var><var>F</var><sub><var>T</var></sub><var>&and;</var><var>q</var><sub><var>A</var></sub><var>&isin;</var><var>F</var><sub><var>A</var></sub>.
+      
+    </p>
+    <p>
+      For any tuple
+      (<var>q</var><sub><var>T</var></sub>,<var>a</var>,<var>w</var>,<var>q</var><sub><var>T</var></sub>')<var>&isin;</var><var>&delta;</var><sub><var>T</var></sub>,
+      and any
+      (<var>q</var><sub><var>A</var></sub>,<var>a</var>,<var>q</var><sub><var>A</var></sub>')<var>&isin;</var><var>&delta;</var><sub><var>A</var></sub>:
+    </p>
+    <p>
+      Suppose <var>w</var> =
+      <var>&sigma;</var><sub>1</sub><var>&hellip;</var><var>&sigma;</var><sub><var>n</var></sub>,
+      then we add <var>n</var> - 1 fresh states to
+      <var>Q</var><sub><var>B</var></sub>, which we label by
+      <var>q</var><sub>1</sub>,<var>&hellip;</var>,<var>q</var><sub><var>n</var>
+      - 1</sub>. Then we have:
+    </p>
+    <ul>
+      <li>
+        <p>
+          ((<var>q</var><sub><var>T</var></sub>,<var>q</var><sub><var>A</var></sub>),<var>&sigma;</var><sub>1</sub>,<var>q</var><sub>1</sub>)<var>&isin;</var><var>&delta;</var><sub><var>B</var></sub>
+        </p>
+      </li>
+      <li>
+        <p>
+          (<var>q</var><sub>1</sub>,<var>&sigma;</var><sub>2</sub>,<var>q</var><sub>2</sub>)<var>&isin;</var><var>&delta;</var><sub><var>B</var></sub>
+        </p>
+      </li>
+      <li>
+        <p>
+          <span style="margin-left: 0.16665em"></span>.<span style="margin-left: 0.16665em"></span>.<span style="margin-left: 0.16665em"></span>.<span
+          style="margin-left: 0.16665em"></span>
+        </p>
+      </li>
+      <li>
+        <p>
+          (<var>q</var><sub><var>n</var> -
+          1</sub>,<var>&sigma;</var><sub><var>n</var></sub>,(<var>q</var><sub><var>T</var></sub>',<var>q</var><sub><var>A</var></sub>'))<var>&isin;</var><var>&delta;</var><sub><var>B</var></sub>
+        </p>
+      </li>
+    </ul>
+    <p>
+      Note that the input 'a' is not used in the construction, but it is
+      crucial that the transitions in T and A have the same input character.
+    </p>
+  </body>
+</html>
