@@ -2,21 +2,23 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:x="http://www.texmacs.org/2002/extensions" xmlns:m="http://www.w3.org/1998/Math/MathML">
   <head>
-    <title>No title</title>
-    <meta content="TeXmacs 1.99.10" name="generator"></meta>
+    <title>NSST preimage&#x5224;&#x5B9A;&#x7B97;&#x6CD5;</title>
+    <meta content="TeXmacs 1.99.13" name="generator"></meta>
     <style type="text/css">
       body { text-align: justify } h5 { display: inline; padding-right: 1em }
       h6 { display: inline; padding-right: 1em } table { border-collapse:
-      collapse } td { padding: 0.2em; vertical-align: baseline } .subsup {
-      display: inline; vertical-align: -0.2em } .subsup td { padding: 0px;
-      text-align: left} .fraction { display: inline; vertical-align: -0.8em }
-      .fraction td { padding: 0px; text-align: center } .wide { position:
-      relative; margin-left: -0.4em } .accent { position: relative;
-      margin-left: -0.4em; top: -0.1em } .title-block { width: 100%;
-      text-align: center } .title-block p { margin: 0px } .compact-block p {
-      margin-top: 0px; margin-bottom: 0px } .left-tab { text-align: left }
-      .center-tab { text-align: center } .balloon-anchor { border-bottom: 1px
-      dotted #000000; outline: none; cursor: help; position: relative; }
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.5em; } .subsup { display:
+      inline; vertical-align: -0.2em } .subsup td { padding: 0px; text-align:
+      left} .fraction { display: inline; vertical-align: -0.8em } .fraction td
+      { padding: 0px; text-align: center } .wide { position: relative;
+      margin-left: -0.4em } .accent { position: relative; margin-left: -0.4em;
+      top: -0.1em } .title-block { width: 100%; text-align: center }
+      .title-block p { margin: 0px } .compact-block p { margin-top: 0px;
+      margin-bottom: 0px } .left-tab { text-align: left } .center-tab {
+      text-align: center } .balloon-anchor { border-bottom: 1px dotted
+      #000000; outline: none; cursor: help; position: relative; }
       .balloon-anchor [hidden] { margin-left: -999em; position: absolute;
       display: none; } .balloon-anchor: hover [hidden] { position: absolute;
       left: 1em; top: 2em; z-index: 99; margin-left: 0; width: 500px; display:
@@ -25,6 +27,7 @@
       padding: 0.2em; } .right-tab { float: right; position: relative; top:
       -1em } 
     </style>
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" language="javascript"></script>
   </head>
   <body>
     <table class="title-block">
@@ -58,12 +61,13 @@
     </table>
     <p style="margin-top: 1em; margin-bottom: 1em">
       <b>&#x5B9A;&#x7406; <class style="font-style: normal">1</class>. </b><i>&#x4EFB;&#x610F;NSST
-      <var>T</var> =
-      (<var>Q</var><sub><var>T</var></sub>,<var>&Sigma;</var>,<var>&Sigma;</var>',<var>&Gamma;</var>,<var>E</var>,<var>q</var><sub>0,<var>T</var></sub>,<var>F</var><sub><var>T</var></sub>)
-      &#x548C; NFA <var>M</var> =
-      (<var>Q</var><sub><var>M</var></sub>,<var>&Sigma;</var>',<var>&delta;</var><sub><var>M</var></sub>,<var>q</var><sub>0,<var>M</var></sub>,<var>F</var><sub><var>M</var></sub>)&#xFF0C;&#x5B58;&#x5728;NFA
-      <var>N</var> =
-      (<var>Q</var><sub><var>N</var></sub>,<var>&Sigma;</var>,<var>&delta;</var><sub><var>N</var></sub>,<var>q</var><sub>0,<var>N</var></sub>,<var>F</var><sub><var>N</var></sub>)&#xFF0C;&#x4F7F;&#x5F97;&#x82E5;<var>w</var><var>&isin;</var><var>L</var>(<var>N</var>)&#xFF0C;&#x5219;&#x5B58;&#x5728;<var>w</var>'<var>&isin;</var><var>T</var>(<var>w</var>)&#x4F7F;&#x5F97;<var>w</var>'<var>&isin;</var><var>L</var>(<var>M</var>)&#xFF0C;&#x4E14;<var>N</var>&#x662F;&#x53EF;&#x8BA1;&#x7B97;&#x7684;&#x3002;</i>
+      \(T = (Q_T, \Sigma, \Sigma', \Gamma, E, q_{0, T}, F_T)\) &#x548C; NFA
+      \(M = (Q_M, \Sigma', \delta_M, q_{0, M},
+      F_M)\)&#xFF0C;&#x5B58;&#x5728;NFA \(N = (Q_N, \Sigma, \delta_N, q_{0,
+      N}, F_N)\)&#xFF0C;&#x4F7F;&#x5F97;&#x82E5;\(w \in L
+      (N)\)&#xFF0C;&#x5219;&#x5B58;&#x5728;\(w' \in T
+      (w)\)&#x4F7F;&#x5F97;\(w' \in L
+      (M)\)&#xFF0C;&#x4E14;\(N\)&#x662F;&#x53EF;&#x8BA1;&#x7B97;&#x7684;&#x3002;</i>
     </p>
     <p>
       <p>
@@ -71,116 +75,87 @@
         </b>&#x4E0B;&#x9762;&#x6784;&#x9020;&#x4E00;&#x4E2A;N&#xFF1A;
       </p>
       <p>
-        &#x9996;&#x5148;&#xFF0C;<var>Q</var><sub><var>N</var></sub> =
-        <var>Q</var><sub><var>T</var></sub><var>&times;</var><var>P</var>(<var>Q</var><sub><var>M</var></sub>)<sup><var>Q</var><sub><var>M</var></sub><var>&times;</var><var>&Gamma;</var></sup>&#xFF0C;<var>P</var>(<var>Q</var><sub><var>M</var></sub>)&#x8868;&#x793A;M&#x7684;&#x72B6;&#x6001;&#x7684;&#x5E42;&#x96C6;&#x3002;&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#xFF0C;&#x4E4B;&#x540E;N&#x7684;&#x72B6;&#x6001;&#x5199;&#x4F5C;(<var>q</var>,<var>&rho;</var>)&#xFF0C;&#x5176;&#x4E2D;q&#x662F;&#x6A21;&#x62DF;&#x7684;T&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x51FD;&#x6570;<var>&rho;</var><var>&isin;</var><var>Q</var><sub><var>M</var></sub><var>&times;</var><var>&Gamma;</var><var>&rarr;</var><var>P</var>(<var>Q</var><sub><var>M</var></sub>)&#x3002;&#x76F4;&#x89C2;&#x4E0A;&#x8BF4;&#xFF0C;<var>&rho;</var>(<var>q</var>,<var>x</var>)&#x8BB0;&#x5F55;&#x4E86;&#x5F53;&#x72B6;&#x6001;&#x4E3A;q&#x65F6;&#x8F93;&#x5165;&#x53D8;&#x91CF;x&#x4EE3;&#x8868;&#x7684;&#x4E32;&#xFF0C;M&#x4F1A;&#x8F6C;&#x79FB;&#x5230;&#x7684;&#x72B6;&#x6001;&#x96C6;&#x3002;
+        &#x9996;&#x5148;&#xFF0C;\(Q_N = Q_T \times P (Q_M)^{Q_M \times
+        \Gamma}\)&#xFF0C;\(P
+        (Q_M)\)&#x8868;&#x793A;M&#x7684;&#x72B6;&#x6001;&#x7684;&#x5E42;&#x96C6;&#x3002;&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#xFF0C;&#x4E4B;&#x540E;N&#x7684;&#x72B6;&#x6001;&#x5199;&#x4F5C;\((q,
+        \rho)\)&#xFF0C;&#x5176;&#x4E2D;q&#x662F;&#x6A21;&#x62DF;&#x7684;T&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x51FD;&#x6570;\(\rho
+        \in Q_M \times \Gamma \rightarrow P
+        (Q_M)\)&#x3002;&#x76F4;&#x89C2;&#x4E0A;&#x8BF4;&#xFF0C;\(\rho (q,
+        x)\)&#x8BB0;&#x5F55;&#x4E86;&#x5F53;&#x72B6;&#x6001;&#x4E3A;q&#x65F6;&#x8F93;&#x5165;&#x53D8;&#x91CF;x&#x4EE3;&#x8868;&#x7684;&#x4E32;&#xFF0C;M&#x4F1A;&#x8F6C;&#x79FB;&#x5230;&#x7684;&#x72B6;&#x6001;&#x96C6;&#x3002;
       </p>
       <p>
-        N&#x7684;&#x521D;&#x59CB;&#x72B6;&#x6001;&#x662F;(<var>q</var><sub>0,<var>T</var></sub>,<var>&rho;</var><sub><var>&epsilon;</var></sub>)&#xFF0C;&#x5176;&#x4E2D;&#x5BF9;&#x4EFB;&#x610F;&#x72B6;&#x6001;q&#x548C;&#x53D8;&#x91CF;x&#xFF0C;<var>&rho;</var><sub><var>&epsilon;</var></sub>(<var>q</var>,<var>x</var>)
-        = {<var>q</var>}&#x3002;
+        N&#x7684;&#x521D;&#x59CB;&#x72B6;&#x6001;&#x662F;\((q_{0, T},
+        \rho_{\varepsilon})\)&#xFF0C;&#x5176;&#x4E2D;&#x5BF9;&#x4EFB;&#x610F;&#x72B6;&#x6001;q&#x548C;&#x53D8;&#x91CF;x&#xFF0C;\(\rho_{\varepsilon}
+        (q, x) = \{ q \}\)&#x3002;
       </p>
       <p>
-        &#x4F5C;&#x7528;&#x4E8E;&#x51FD;&#x6570;<var>&rho;</var>&#xFF0C;&#x53D8;&#x91CF;x&#x548C;&#x5B57;&#x7B26;&#x4E32;<var>w</var><var>&isin;</var>(<var>&Gamma;</var><var>&cup;</var><var>&Sigma;</var>')<sup><var>&lowast;</var></sup>&#xFF0C;&#x66F4;&#x65B0;&#x7B97;&#x5B50;U&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x51FD;&#x6570;<var>&rho;</var>'&#xFF0C;&#x5176;&#x5B9A;&#x4E49;&#x4E3A;&#xFF1A;
+        &#x4F5C;&#x7528;&#x4E8E;&#x51FD;&#x6570;\(\rho\)&#xFF0C;&#x53D8;&#x91CF;x&#x548C;&#x5B57;&#x7B26;&#x4E32;\(w
+        \in (\Gamma \cup
+        \Sigma')^{\ast}\)&#xFF0C;&#x66F4;&#x65B0;&#x7B97;&#x5B50;U&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x51FD;&#x6570;\(\rho'\)&#xFF0C;&#x5176;&#x5B9A;&#x4E49;&#x4E3A;&#xFF1A;
       </p>
       <center>
-        <var>U</var>
-        (
-        <var>&rho;</var>
-        ,
-        <var>x</var>
-        ,
-        <var>w</var>
-        '
-        <var>a</var>
-        )(
-        <var>q</var>
-        ,
-        <var>x</var>
-        ) = {
-        <table style="display: inline-table; vertical-align: middle">
-          <tbody><tr>
-            <td style="text-align: center"><var>&delta;</var><sub><table class="subsup">
-              <tr>
-                <td><var>&lowast;</var></td>
-              </tr>
-              <tr>
-                <td><var>M</var></td>
-              </tr>
-            </table></sub>(<var>U</var>(<var>&rho;</var>,<var>x</var>,<var>w</var>')(<var>q</var>,<var>x</var>),<var>a</var>)</td>
-            <td style="text-align: center"><var>a</var><var>&isin;</var><var>&Sigma;</var>'</td>
-          </tr><tr>
-            <td style="text-align: center">cup<sub><var>q</var>'<var>&isin;</var><var>U</var>(<var>&rho;</var>,<var>x</var>,<var>w</var>')(<var>q</var>,<var>x</var>)</sub><var>&rho;</var>(<var>q</var>',<var>a</var>)</td>
-            <td style="text-align: center"><var>a</var><var>&isin;</var><var>&Gamma;</var></td>
-          </tr></tbody>
-        </table>
-        <var>&#x200B;</var>
+        \(\displaystyle U (\rho, x, w' a) (q, x) = \left\{ \begin{array}{cc}
+ 
+        \delta_M^{\ast} (U (\rho, x, w') (q, x), a) & a \in \Sigma'\\
+ 
+        \bigcup_{q' \in U (\rho, x, w') (q, x)} \rho (q', a) & a \in
+        \Gamma
+\end{array} \right.\)
       </center>
       <center>
-        <var>U</var>(<var>&rho;</var>,<var>x</var>,<var>&epsilon;</var>)(<var>q</var>,<var>x</var>)
-        = {<var>q</var>}
+        \(\displaystyle U (\rho, x, \varepsilon) (q, x) = \{ q \}\)
       </center>
       <center>
-        <var>U</var>(<var>&rho;</var>,<var>x</var>,<var>w</var>)(<var>q</var>,<var>y</var>)
-        =
-        <var>&rho;</var>(<var>q</var>,<var>y</var>),<var>x</var><var>&ne;</var><var>y</var>
+        \(\displaystyle U (\rho, x, w) (q, y) = \rho (q, y), x \neq y\)
       </center>
       <p>
-        &#x5BF9;&#x4E8E;NSST&#x7684;&#x5E76;&#x53D1;&#x8D4B;&#x503C;<var>A</var><var>&isin;</var><var>&Gamma;</var><var>&rarr;</var>(<var>&Gamma;</var><var>&cup;</var><var>&Sigma;</var>')<sup><var>&lowast;</var></sup>&#xFF0C;&#x6269;&#x5C55;U&#x4E3A;<var>U</var><sup><var>&lowast;</var></sup>:
+        &#x5BF9;&#x4E8E;NSST&#x7684;&#x5E76;&#x53D1;&#x8D4B;&#x503C;\(A \in
+        \Gamma \rightarrow (\Gamma \cup
+        \Sigma')^{\ast}\)&#xFF0C;&#x6269;&#x5C55;U&#x4E3A;\(U^{\ast}\):
       </p>
       <center>
-        <var>U</var><sup><var>&lowast;</var></sup>(<var>&rho;</var>,<var>A</var>)(<var>q</var>,<var>x</var>)
-        =
-        <var>U</var>(<var>&rho;</var>,<var>x</var>,<var>A</var>(<var>x</var>))(<var>q</var>,<var>x</var>)
+        \(\displaystyle U^{\ast} (\rho, A) (q, x) = U (\rho, x, A (x)) (q,
+        x)\)
       </center>
       <p>
-        &#x5BF9;N&#x7684;&#x4EFB;&#x610F;&#x72B6;&#x6001;(<var>q</var>,<var>&rho;</var>)&#xFF0C;&#x5982;&#x679C;(<var>q</var>',<var>A</var>)<var>&isin;</var><var>E</var>(<var>q</var>,<var>a</var>)&#xFF0C;&#x5219;&#x5BF9;N&#x6709;&#xFF1A;
+        &#x5BF9;N&#x7684;&#x4EFB;&#x610F;&#x72B6;&#x6001;\((q,
+        \rho)\)&#xFF0C;&#x5982;&#x679C;\((q', A) \in E (q,
+        a)\)&#xFF0C;&#x5219;&#x5BF9;N&#x6709;&#xFF1A;
       </p>
       <center>
-        ((<var>q</var>,<var>&rho;</var>),<var>a</var>,(<var>q</var>',<var>U</var><sup><var>&lowast;</var></sup>(<var>&rho;</var>,<var>A</var>)))<var>&isin;</var><var>&delta;</var><sub><var>N</var></sub>
+        \(\displaystyle ((q, \rho), a, (q', U^{\ast} (\rho, A))) \in
+        \delta_N\)
       </center>
       <p>
-        &#x5BF9;&#x5B57;&#x7B26;&#x4E32;<var>w</var><var>&isin;</var>(<var>&Gamma;</var><var>&cup;</var><var>&Sigma;</var>')<sup><var>&lowast;</var></sup>&#x548C;&#x51FD;&#x6570;<var>&rho;</var>&#xFF0C;&#x5B9A;&#x4E49;&#x96C6;&#x5408;<var>R</var><sub><var>w</var>,<var>&rho;</var></sub>&#x4E3A;&#xFF1A;
+        &#x5BF9;&#x5B57;&#x7B26;&#x4E32;\(w \in (\Gamma \cup
+        \Sigma')^{\ast}\)&#x548C;&#x51FD;&#x6570;\(\rho\)&#xFF0C;&#x5B9A;&#x4E49;&#x96C6;&#x5408;\(R_{w,
+        \rho}\)&#x4E3A;&#xFF1A;
       </p>
       <center>
-        <var>R</var>
-        <sub><var>w</var>,<var>&rho;</var></sub>
-        = {
-        <table style="display: inline-table; vertical-align: middle">
-          <tbody><tr>
-            <td style="text-align: center">{<var>q</var><sub>0,<var>M</var></sub>}</td>
-            <td style="text-align: center"><var>w</var> = <var>&epsilon;</var></td>
-          </tr><tr>
-            <td style="text-align: center"><var>&delta;</var><sub><table class="subsup">
-              <tr>
-                <td><var>&lowast;</var></td>
-              </tr>
-              <tr>
-                <td><var>M</var></td>
-              </tr>
-            </table></sub>(<var>R</var><sub><var>w</var>',<var>&rho;</var></sub>,<var>a</var>)</td>
-            <td style="text-align: center"><var>w</var> =
-            <var>w</var>'<var>a</var><var>&and;</var><var>a</var><var>&isin;</var><var>&Sigma;</var>'</td>
-          </tr><tr>
-            <td style="text-align: center">cup<sub><var>q</var><var>&isin;</var><var>R</var><sub><var>w</var>',<var>&rho;</var></sub></sub><var>&rho;</var>(<var>q</var>,<var>a</var>)</td>
-            <td style="text-align: center"><var>w</var> =
-            <var>w</var>'<var>a</var><var>&and;</var><var>a</var><var>&isin;</var><var>&Gamma;</var></td>
-          </tr></tbody>
-        </table>
-        <var>&#x200B;</var>
+        \(\displaystyle R_{w, \rho} = \left\{ \begin{array}{cc}
+  \{ q_{0, M}
+        \} & w = \varepsilon\\
+  \delta_M^{\ast} (R_{w', \rho}, a) & w = w' a
+        \wedge a \in \Sigma'\\
+  \bigcup_{q \in R_{w', \rho}} \rho (q, a) & w
+        = w' a \wedge a \in \Gamma
+\end{array} \right.\)
       </center>
       <p>
         &#x6700;&#x540E;&#xFF0C;NFA
-        N&#x7684;&#x7EC8;&#x6B62;&#x72B6;&#x6001;&#x96C6;<var>F</var><sub><var>N</var></sub>&#x4E3A;&#x6EE1;&#x8DB3;&#x4E0B;&#x5217;&#x6761;&#x4EF6;&#x7684;&#x72B6;&#x6001;(<var>q</var>,<var>&rho;</var>)&#x7684;&#x96C6;&#x5408;&#xFF1A;
+        N&#x7684;&#x7EC8;&#x6B62;&#x72B6;&#x6001;&#x96C6;\(F_N\)&#x4E3A;&#x6EE1;&#x8DB3;&#x4E0B;&#x5217;&#x6761;&#x4EF6;&#x7684;&#x72B6;&#x6001;\((q,
+        \rho)\)&#x7684;&#x96C6;&#x5408;&#xFF1A;
       </p>
       <ol>
         <li>
           <p>
-            <var>F</var><sub><var>T</var></sub>(<var>q</var>)&#x6709;&#x5B9A;&#x4E49;&#x3002;
+            \(F_T (q)\)&#x6709;&#x5B9A;&#x4E49;&#x3002;
           </p>
         </li>
         <li>
           <p>
-            &#x4EE4;<var>w</var> =
-            <var>F</var><sub><var>T</var></sub>(<var>q</var>)&#xFF0C;&#x5219;<var>R</var><sub><var>w</var>,<var>&rho;</var></sub><var>&cap;</var><var>F</var><sub><var>M</var></sub><var>&ne;</var><var>&empty;</var>
+            &#x4EE4;\(w = F_T (q)\)&#xFF0C;&#x5219;\(R_{w, \rho} \cap F_M \neq
+            \emptyset\)
           </p>
         </li>
       </ol>

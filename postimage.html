@@ -27,6 +27,7 @@
       padding: 0.2em; } .right-tab { float: right; position: relative; top:
       -1em } 
     </style>
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" language="javascript"></script>
   </head>
   <body>
     <table class="title-block">
@@ -39,53 +40,38 @@
       </tr>
     </table>
     <p>
-      For any transducer <var>T</var> =
-      (<var>Q</var><sub><var>T</var></sub>,<var>&Sigma;</var>,<var>&delta;</var><sub><var>T</var></sub>,<var>q</var><sub>0,<var>T</var></sub>,<var>F</var><sub><var>T</var></sub>)
-      and FA <var>A</var> =
-      (<var>Q</var><sub><var>A</var></sub>,<var>&Sigma;</var>,<var>&delta;</var><sub><var>A</var></sub>,<var>q</var><sub>0,<var>A</var></sub>,<var>F</var><sub><var>A</var></sub>),
-      we can construct a FA <var>B</var> =
-      (<var>Q</var><sub><var>B</var></sub>,<var>&Sigma;</var>,<var>&delta;</var><sub><var>B</var></sub>,<var>q</var><sub>0,<var>B</var></sub>,<var>F</var><sub><var>B</var></sub>)
-      which satisfies <var>L</var>(<var>B</var>) =
-      Post<sub><var>T</var></sub>(<var>A</var>) as follows:
+      For any transducer \(T = (Q_T, \Sigma, \delta_T, q_{0, T}, F_T)\) and FA
+      \(A = (Q_A, \Sigma, \delta_A, q_{0, A}, F_A)\), we can construct a FA
+      \(B = (Q_B, \Sigma, \delta_B, q_{0, B}, F_B)\) which satisfies \(L (B)
+      =\operatorname{Post}_T (A)\) as follows:
     </p>
     <p>
-      <var>Q</var><sub><var>B</var></sub> =
-      (<var>Q</var><sub><var>T</var></sub><var>&times;</var><var>Q</var><sub><var>A</var></sub>)<var>&cup;</var><var>S</var>,
-      where S contains all the fresh intermediate states which are introduced
-      below.
+      \(Q_B = (Q_T \times Q_A) \cup S\), where S contains all the fresh
+      intermediate states which are introduced below.
     </p>
     <p>
-      The initial state <var>q</var><sub>0,<var>B</var></sub> is
-      (<var>q</var><sub>0,<var>T</var></sub>,<var>q</var><sub>0,<var>A</var></sub>),
-      and <var>F</var><sub><var>B</var></sub> contains states of the form
-      (<var>q</var><sub><var>T</var></sub>,<var>q</var><sub><var>A</var></sub>)
-      which satisfies
-      <var>q</var><sub><var>T</var></sub><var>&isin;</var><var>F</var><sub><var>T</var></sub><var>&and;</var><var>q</var><sub><var>A</var></sub><var>&isin;</var><var>F</var><sub><var>A</var></sub>.
-      
+      The initial state \(q_{0, B}\) is \((q_{0, T}, q_{0, A})\), and \(F_B\)
+      contains states of the form \((q_T, q_A)\) which satisfies \(q_T \in F_T
+      \wedge q_A \in F_A\). 
     </p>
     <p>
-      For any tuple
-      (<var>q</var><sub><var>T</var></sub>,<var>a</var>,<var>w</var>,<var>q</var><sub><var>T</var></sub>')<var>&isin;</var><var>&delta;</var><sub><var>T</var></sub>,
-      and any
-      (<var>q</var><sub><var>A</var></sub>,<var>a</var>,<var>q</var><sub><var>A</var></sub>')<var>&isin;</var><var>&delta;</var><sub><var>A</var></sub>:
+      For any tuple \((q_T, a, w, q_T') \in \delta_T\), and any \((q_A, a,
+      q_A') \in \delta_A\):
     </p>
     <p>
-      Suppose <var>w</var> =
-      <var>&sigma;</var><sub>1</sub><var>&hellip;</var><var>&sigma;</var><sub><var>n</var></sub>,
-      then we add <var>n</var> - 1 fresh states to
-      <var>Q</var><sub><var>B</var></sub>, which we label by
-      <var>q</var><sub>1</sub>,<var>&hellip;</var>,<var>q</var><sub><var>n</var>
-      - 1</sub>. Then we have:
+      Suppose \(w = \sigma_1 \ldots \sigma_n\), then we add \(n - 1\) fresh
+      states to \(Q_B\), which we label by \(q_1, \ldots, q_{n - 1}\). Then we
+      have:
     </p>
     <ul>
       <li>
         <p>
-          ((<var>q</var><sub><var>T</var></sub>,<var>q</var><sub><var>A</var></sub>),<var>&sigma;</var><sub>1</sub>,<var>q</var><sub>1</sub>)<var>&isin;</var><var>&delta;</var><sub><var>B</var></sub>
+          \(((q_T, q_A), \sigma_1, q_1) \in \delta_B\)
         </p>
       </li>
       <li>
         <p>
-          (<var>q</var><sub>1</sub>,<var>&sigma;</var><sub>2</sub>,<var>q</var><sub>2</sub>)<var>&isin;</var><var>&delta;</var><sub><var>B</var></sub>
+          \((q_1, \sigma_2, q_2) \in \delta_B\)
         </p>
       </li>
       <li>
@@ -96,8 +82,7 @@
       </li>
       <li>
         <p>
-          (<var>q</var><sub><var>n</var> -
-          1</sub>,<var>&sigma;</var><sub><var>n</var></sub>,(<var>q</var><sub><var>T</var></sub>',<var>q</var><sub><var>A</var></sub>'))<var>&isin;</var><var>&delta;</var><sub><var>B</var></sub>
+          \((q_{n - 1}, \sigma_n, (q_T', q_A')) \in \delta_B\)
         </p>
       </li>
     </ul>
